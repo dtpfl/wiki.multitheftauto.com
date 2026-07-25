@@ -14,24 +14,29 @@ properties:
     description: A client-side specification of a function.
     $ref: "#/$defs/common_properties"
 
+anyOf:
+  - required: [shared]
+  - required: [server]
+  - required: [client]
+
 $defs:
   common_properties:
     type: object
-    syntaxes:
-      type: array
-      description: Additional syntaxes for function.
-      items:
-        allOf:
-          - $ref: "#/$defs/common_properties"
-          - type: object
-            properties:
-              displayParams:
-              type: boolean
-              description: Specifies whether to display the parameters and returns sections.
-              default: true
     required:
       - name
     properties:
+      syntaxes:
+        type: array
+        description: Additional syntaxes for the function.
+        items:
+          allOf:
+            - $ref: "#/$defs/common_properties"
+            - type: object
+              properties:
+                displayParams:
+                  type: boolean
+                  description: Specifies whether to display the parameters and returns sections.
+                  default: true
       redirect:
         type: string
         description: The page to redirect to.

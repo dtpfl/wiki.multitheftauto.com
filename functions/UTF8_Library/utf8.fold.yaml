@@ -21,9 +21,11 @@ shared:
       parameters:
         - name: input
           type: string|int
+          description: A string character sequence OR an integer value.
       returns:
         values:
         - type: string|int
+          name: value
       displayParams: false
   notes:
   - type: info

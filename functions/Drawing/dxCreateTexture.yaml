@@ -58,7 +58,7 @@ client:
           templateList: texture-types
         - name: depth
           type: int
-          default: 1
+          default: '1'
           description: Desired number of slices when creating a volume texture.
       returns:
         values:
