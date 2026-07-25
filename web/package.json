@@ -10,6 +10,8 @@
     "predev": "node scripts/preprocess.js",
     "dev": "astro dev",
     "start": "astro dev",
+    "check": "astro check",
+    "check:full": "npm run check && npm run build",
     "prebuild": "node scripts/preprocess.js",
     "build": "astro build",
     "preview": "astro preview",
@@ -30,5 +32,9 @@
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.62.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^6.0.3"
   }
 }

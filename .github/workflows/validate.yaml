@@ -10,12 +10,14 @@ on:
       - 'events/**/*.yaml'
       - 'functions/**/*.yaml'
       - 'schemas/**/*.yaml'
+      - 'tools/validate.sh'
   pull_request:
     paths:
       - 'elements/**/*.yaml'
       - 'events/**/*.yaml'
       - 'functions/**/*.yaml'
       - 'schemas/**/*.yaml'
+      - 'tools/validate.sh'
   workflow_dispatch:
 
 jobs:
@@ -29,6 +31,4 @@ jobs:
           lfs: true
       
       - name: Run validator
-        run: |
-          chmod +x tools/yajsv tools/validate.sh
-          tools/validate.sh
+        run: tools/validate.sh

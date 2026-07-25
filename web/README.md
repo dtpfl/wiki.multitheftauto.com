@@ -16,6 +16,8 @@ All commands are run from the root of the web project (this folder), from a term
 | :------------------------ | :----------------------------------------------- |
 | `npm ci`                  | Installs the locked dependencies                 |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run check`           | Runs Astro and TypeScript diagnostics            |
+| `npm run check:full`      | Runs diagnostics and a production build          |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |

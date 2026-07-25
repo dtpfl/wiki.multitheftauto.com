@@ -23,4 +23,4 @@ jobs:
         working-directory: ./web
         run: |
           npm ci
-          npm run build
+          npm run check:full
