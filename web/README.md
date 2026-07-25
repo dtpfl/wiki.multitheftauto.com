@@ -6,7 +6,7 @@ The source code in this directory [(/web)](/web) is licensed under the GPLv3 lic
 
 ## Development
 
-Requires [Node.js](https://nodejs.org) version `22` or higher (`node -v` to check).
+Requires [Node.js](https://nodejs.org) version `22.12` or higher (`node -v` to check).
 
 The site is built with [Astro](https://astro.build) and the [Starlight](https://starlight.astro.build) expansion.
 
@@ -14,7 +14,7 @@ All commands are run from the root of the web project (this folder), from a term
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
+| `npm ci`                  | Installs the locked dependencies                 |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |

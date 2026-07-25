@@ -2,6 +2,10 @@
   "name": "starlight",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=9.6.5"
+  },
   "scripts": {
     "predev": "node scripts/preprocess.js",
     "dev": "astro dev",
@@ -12,19 +16,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.38.3",
+    "@astrojs/starlight": "^0.41.4",
     "@multitheftauto/starlight-theme-mtasa": "^1.4.1",
-    "astro": "^6.1.6",
-    "glob": "^11.1.0",
-    "js-yaml": "^4.1.0",
-    "marked": "^15.0.6",
-    "node-html-parser": "^7.0.1",
-    "pagefind": "^1.3.0",
-    "sharp": "^0.32.5",
-    "starlight-scroll-to-top": "^0.4.0",
-    "tm-themes": "^1.10.6"
+    "astro": "^7.1.3",
+    "glob": "^13.0.6",
+    "js-yaml": "^4.3.0",
+    "marked": "^18.0.7",
+    "node-html-parser": "^9.0.0",
+    "pagefind": "^1.5.2",
+    "sharp": "^0.35.3",
+    "starlight-scroll-to-top": "^1.0.1",
+    "tm-themes": "^1.12.2"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "*"
+    "@rollup/rollup-linux-x64-gnu": "^4.62.2"
   }
 }

@@ -84,7 +84,7 @@ export default defineConfig({
         },
         {
           label: "Articles",
-          autogenerate: { directory: "articles" },
+          items: [{ autogenerate: { directory: "articles" } }],
         },
         {
           label: "Reference",
