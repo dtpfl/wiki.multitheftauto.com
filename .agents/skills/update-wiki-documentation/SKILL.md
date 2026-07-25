@@ -59,10 +59,12 @@ official MTA team's scope and page conventions.
 2. Run `tools/check.sh` after a documentation change.
 3. Run `tools/check.sh --full` after changing a renderer, component, content
    loader, shared data, preprocessing, or build behavior.
-4. Inspect every affected route at `http://localhost:4321`, including narrow
+4. Restart the development server after changing root YAML if the rendered
+   route is stale; external collections may not reliably hot-reload.
+5. Inspect every affected route at `http://localhost:4321`, including narrow
    viewport behavior for tables and images.
-5. Review `git diff` for unrelated changes, generated output, placeholder text,
+6. Review `git diff` for unrelated changes, generated output, placeholder text,
    broken paths, and accidentally removed review markers.
-6. Report the files changed, checks performed, visual routes inspected, and
+7. Report the files changed, checks performed, visual routes inspected, and
    unresolved technical questions. Do not commit or push unless explicitly
    requested.

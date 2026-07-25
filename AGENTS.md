@@ -55,6 +55,11 @@ npm --prefix web run dev
 
 The development site is available at `http://localhost:4321`.
 
+Root YAML collections live outside `web/` and may not reliably hot-reload in
+Astro's development server. After changing a function, event, element, or type
+YAML file, restart the server before judging the rendered page if the change is
+not visible.
+
 ## Documentation rules
 
 - Treat the schemas as the authoritative structural contract. Inspect nearby,
