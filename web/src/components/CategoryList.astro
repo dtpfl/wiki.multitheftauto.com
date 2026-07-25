@@ -115,7 +115,7 @@ function displayCategory(category: string) {
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([category, items]) => (
     <section id={slugify(category)}>
-      <h4>{displayTitle(category)}
+      <h4>{displayTitle(category)}{" "}
         <a href={`#${slugify(category)}`}><Icon size="1.5rem" name="external" class="mtainfoicon"/></a>
       </h4>
 
@@ -136,6 +136,7 @@ function displayCategory(category: string) {
 
                 {what === "all_functions" && funcInfo && (
                   <>
+                    {" "}
                     (<span class={`side-${funcInfo.type}`}>{funcInfo.typePretty}</span>)
                   </>
                 )}
@@ -150,12 +151,15 @@ function displayCategory(category: string) {
                 )}
 
                 {badge && (
-                  <Badge
-                    text={badge.text}
-                    variant={badge.variant}
-                    size="medium"
-                    style="font-weight: bold;"
-                  />
+                  <>
+                    {" "}
+                    <Badge
+                      text={badge.text}
+                      variant={badge.variant}
+                      size="medium"
+                      style="font-weight: bold;"
+                    />
+                  </>
                 )}
               </li>
             );

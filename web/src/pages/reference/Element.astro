@@ -25,7 +25,7 @@ const elementsByCategory = getElementsByCategory();
           {elements.map(element => (
             <li>
               <a href={`/reference/${element.id}`}>{element.id}</a>
-              {hasOopMethods(element) ? <span class="small-text">[OOP]</span> : ''}
+              {hasOopMethods(element) ? <>{" "}<span class="small-text">[OOP]</span></> : ''}
             </li>
           ))}
         </ul>

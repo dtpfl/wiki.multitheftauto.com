@@ -144,7 +144,7 @@ const oopList = Array.isArray(funcInfo.oop) ? funcInfo.oop : funcInfo.oop ? [fun
     {oopList.length > 0 && (
       <div class="function-oop">
         <h4>
-          OOP Syntax 
+          OOP Syntax{" "}
           <a class="small-text" href="/reference/OOP">Help! I don't understand this!</a>
         </h4>
 
@@ -165,14 +165,14 @@ const oopList = Array.isArray(funcInfo.oop) ? funcInfo.oop : funcInfo.oop ? [fun
 
                 {oopItem.constructorclass ? (
                   <li>
-                    <strong>Constructor</strong>:
+                    <strong>Constructor</strong>:{" "}
                     <a href={`/reference/${oopItem.element}`}>{oopItem.constructorclass}</a>(...)
                   </li>
                 ) : (
                   <>
                     {oopItem.method && (
                       <li>
-                        <strong>Method</strong>:<a href={`/reference/${oopItem.element}`}>{oopItem.static ? getFixedStaticOOPClass(oopItem.element) : oopItem.element}</a>{oopItem.static ? "." : ":"}{oopItem.method}(...)
+                        <strong>Method</strong>:{" "}<a href={`/reference/${oopItem.element}`}>{oopItem.static ? getFixedStaticOOPClass(oopItem.element) : oopItem.element}</a>{oopItem.static ? "." : ":"}{oopItem.method}(...)
                       </li>
                     )}
                     {oopItem.variable && (
@@ -200,7 +200,7 @@ const oopList = Array.isArray(funcInfo.oop) ? funcInfo.oop : funcInfo.oop ? [fun
 
             {oopList[0].constructorclass ? (
               <li>
-                <strong>Constructor</strong>:
+                <strong>Constructor</strong>:{" "}
                 <a href={`/reference/${oopList[0].element}`}>
                   {oopList[0].constructorclass}
                 </a>(...)
@@ -209,7 +209,7 @@ const oopList = Array.isArray(funcInfo.oop) ? funcInfo.oop : funcInfo.oop ? [fun
               <>
                 {oopList[0].method && (
                   <li>
-                    <strong>Method</strong>:<a href={`/reference/${oopList[0].element}`}>{oopList[0].static ? getFixedStaticOOPClass(oopList[0].element) : oopList[0].element}</a>{oopList[0].static ? "." : ":"}{oopList[0].method}(...)
+                    <strong>Method</strong>:{" "}<a href={`/reference/${oopList[0].element}`}>{oopList[0].static ? getFixedStaticOOPClass(oopList[0].element) : oopList[0].element}</a>{oopList[0].static ? "." : ":"}{oopList[0].method}(...)
                   </li>
                 )}
 
