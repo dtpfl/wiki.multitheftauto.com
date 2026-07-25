@@ -67,14 +67,14 @@ if (images?.length) {
     }
 </style>
 
-<script is:client="load" type="module">
+<script is:inline type="module">
     import "https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js";
 
-    const lightbox = GLightbox({ selector: ".glightbox" });
+    const createLightbox = Reflect.get(globalThis, "GLightbox");
+    const lightbox = createLightbox({ selector: ".glightbox" });
 
     // Fix aria-hidden console warning
     lightbox.on("open", () => {
         document.querySelector(".glightbox-container")?.setAttribute("tabindex", "-1").focus();
     });
 </script>
-

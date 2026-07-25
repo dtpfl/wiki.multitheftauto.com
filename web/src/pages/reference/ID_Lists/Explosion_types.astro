@@ -6,7 +6,7 @@ import { Code } from '@astrojs/starlight/components';
 import { explosionTypesById } from '@src/data/explosion_types';
 
 let luaTable = `local explosionTypes = {\n`;
-Object.entries(explosionTypesById).forEach(([id, { name, info }], index) => {
+Object.entries(explosionTypesById).forEach(([id, { name, info }]) => {
     luaTable += `\t[${id}] = "${name}"`;
     if (info) {
         luaTable += `, -- ${info}`;

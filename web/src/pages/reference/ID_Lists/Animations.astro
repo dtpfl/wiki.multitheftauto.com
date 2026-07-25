@@ -76,7 +76,7 @@ luaTableWithDescriptions += `\n}\n`;
     <NoteBox type="warning">Animations marked with <span class="important">*</span> are meant to be applied to <strong>objects</strong> (e.g. parachute movement) in GTA:SA.<br>These will not work when applied to peds/players.</NoteBox>
 
     <ul class="anims-toc">
-        {Object.entries(animations).map(([group, anims]) => (
+        {Object.keys(animations).map((group) => (
             <li>
                 <a href={`#${group}`}>{group}</a>
             </li>

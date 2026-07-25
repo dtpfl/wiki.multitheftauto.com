@@ -27,7 +27,7 @@ import { ide_table } from '@src/data/ide_table';
           </tr>
       </thead>
       <tbody id="tableBody">
-          {ide_table.map(([id, lod_id, dff, txd, lod_dff, lod_txd, ide], i) => (
+          {ide_table.map(([id, lod_id, dff, txd, lod_dff, lod_txd, ide]) => (
           <tr>
               <td><a href={`https://dev.prineside.com/en/gtasa_samp_model_id/model/${id}`}>{id}</a></td>
               <td>{dff}</td>

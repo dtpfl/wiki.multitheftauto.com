@@ -1,7 +1,7 @@
 import { marked } from 'marked';
 import path from 'path';
-import { getFunctionInfo, getFunctionsByCategory, getFunctionsByTypeByCategory } from '@src/utils/functions';
-import { getEventsByCategory, getEventsByTypeByCategory } from '@src/utils/events';
+import { getFunctionInfo, getFunctionsByTypeByCategory } from '@src/utils/functions';
+import { getEventsByTypeByCategory } from '@src/utils/events';
 import { getElementsByCategory, getElementCategory } from '@src/utils/elements';
 
 import type { ImageMetadata } from 'astro';
@@ -43,9 +43,6 @@ export type SeeAlsoLinkGroup = {
   title: string;
   links: SeeAlsoLink[];
 };
-
-const titleCase = (str: string) =>
-  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 
 const makeTitle = (subType: string, category: string, type: string): string => {
   const displayName = (name: string) => name.replace(/_/g, ' ');

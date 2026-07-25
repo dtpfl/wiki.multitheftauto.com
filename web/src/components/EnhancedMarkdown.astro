@@ -81,7 +81,7 @@ const tokens = inline ? marked.Lexer.lexInline(processed) : marked.lexer(process
       if (inline) {
         return (
           <Fragment
-            set:html={marked.parseInline(token.raw ?? token.text ?? "")}
+            set:html={marked.parseInline(token.raw ?? "")}
           />
         );
       }

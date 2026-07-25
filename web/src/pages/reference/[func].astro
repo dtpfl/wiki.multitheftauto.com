@@ -2,14 +2,13 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection } from 'astro:content';
 import { getFunctionInfo, parseFunctionSyntaxes, getFixedStaticOOPClass } from '@src/utils/functions';
-import { renderInlineMarkdown, getSeeAlsoLinksForItem, extractVersion, isVersionLE, renderRevisionLink } from '@src/utils/general';
+import { getSeeAlsoLinksForItem } from '@src/utils/general';
 import fs from "fs";
 import path from "path";
 import { Code } from '@astrojs/starlight/components';
-import { MTA_CURRENT_VERSION } from '@src/content.constants';
 
 import NoteBox from '@src/components/NoteBox.astro';
-import type { NotesType, IssuesTable, MetaItem } from '@src/utils/types';
+import type { NotesType, MetaItem } from '@src/utils/types';
 
 import SeeAlsoSection from '@src/components/SeeAlsoSection.astro';
 import CodeExamplesSection from '@src/components/CodeExamplesSection.astro';
