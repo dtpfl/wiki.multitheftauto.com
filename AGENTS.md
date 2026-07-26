@@ -25,6 +25,9 @@ community content, general scripting tutorials, or fan-made project pages.
 - `web/src/pages/reference/` and `web/src/components/` render reference pages.
 - `web/src/content/docs/` contains hand-authored Starlight content.
 - `web/src/data/` contains structured data for hand-authored reference pages.
+- `.agents/reports/wiki-readiness.md` records the latest migration-readiness
+  audit and prioritized documentation queue. Refresh its snapshot after
+  structural changes or completed documentation batches.
 
 Use the `update-wiki-documentation` skill when creating, migrating, reviewing,
 or restructuring wiki documentation.
